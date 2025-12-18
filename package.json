@@ -1,0 +1,40 @@
+{
+    "name": "vibedebugger-sdk",
+    "version": "0.0.0",
+    "private": true,
+    "description": "Vibe Debugger SDK - Server-side error monitoring for modern applications",
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "build": "npm run build --workspaces --if-present",
+        "test": "npm run test --workspaces --if-present",
+        "clean": "rm -rf packages/*/dist packages/*/node_modules",
+        "changeset": "changeset",
+        "version-packages": "changeset version",
+        "release": "npm run build && changeset publish"
+    },
+    "devDependencies": {
+        "@changesets/cli": "^2.27.1",
+        "@types/node": "^20.11.5",
+        "tsup": "^8.0.1",
+        "typescript": "^5.3.3",
+        "vitest": "^1.2.0"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yourusername/vibedebugger-sdk.git"
+    },
+    "keywords": [
+        "error-tracking",
+        "monitoring",
+        "debugging",
+        "nextjs",
+        "nodejs"
+    ],
+    "author": "Your Name",
+    "license": "MIT"
+}
